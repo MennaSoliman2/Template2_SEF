@@ -321,31 +321,29 @@ header ul li:last-child i::after{
     font-size: 15px;
 }
 
-.shop-flex{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.shop-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1.66fr; 
+    
+    gap: 10px 10px; 
+    overflow: hidden;
+    
 }
-.shop-flex .shop-one{
-    width: 26%;
-    display: flex;
-    flex-direction: column;
-}
-.shop-flex .shop-one img{
+
+.shop-grid .shop-one img{
     width: 100%;
 }
-.shop-flex .shop-one .image-one{
-    margin-bottom: 30px;
+.shop-grid .shop-one .image-one{
+    
     position: relative;
     overflow: hidden;
 }
-.shop-three{
-    width: 44%;
-}
+
 .shop-three .image-three{
+    
     position: relative;
     overflow: hidden;
-    width: 100%;
+    
 }
 .shop-three img{
     width: 100%;
@@ -696,6 +694,7 @@ header ul li:last-child i::after{
     .icons{
         display: none;
     }
+   
 }
 
 @media(max-width:991px){
@@ -705,15 +704,15 @@ header ul li:last-child i::after{
     section{
         padding: 50px 4%;
     }
-    .shop-flex .shop-one{
-        width: 49%;
-    }
-    .shop-flex .shop-three{
+    
+    .shop-grid .shop-three{
         width: 100%;
     }
     .discount{
         width: 90%;
     }
+    
+    
 }
 @media(max-width:881px){
     .home-text h1{
@@ -725,6 +724,11 @@ header ul li:last-child i::after{
     .discount-desc{
         flex: 100%;
         margin-bottom: 20px;
+    }
+    .shop-grid{
+        grid-template-columns:1fr 1fr 0;
+        
+        
     }
 }
 @media(max-width:768px){
@@ -783,7 +787,7 @@ header ul li:last-child i::after{
     }
 }
 @media(max-width:570px){
-    .shop-flex .shop-one{
+    .shop-grid .shop-one{
         width: 100%;
     }
     .box{
@@ -807,5 +811,8 @@ header ul li:last-child i::after{
         transform: scale(0);
         visibility: hidden;
         opacity: 0;
+    }
+    .shop-grid{
+        grid-template-columns: auto;
     }
 }
